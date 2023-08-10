@@ -1,0 +1,180 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container ">
+     
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="mx-auto " id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#solve">Solve</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#ourvision">Our Vision</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#instructions">Instructions</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-6 text text-center  " id="ex5">
+            <h1 class="fw-bolder">Rubik's Cube Solving </h1>
+            <h3 class="fw-bolder" style="color:grey;">Using Deep Learning </h3>
+            <p class="pt-4 fw" >Our project presents an innovative solution for solving the Rubik's Cube using cutting-edge technology. Leveraging visual recognition through camera scanning and virtual line drawing, we've created an interactive experience that guides users step-by-step to solve the iconic puzzle. Our approach integrates advanced algorithms like Kociemba's to analyze cube configurations and determine optimal solutions. By seamlessly blending computer vision, deep learning, and algorithmic thinking, our project not only offers a unique way to conquer the Rubik's Cube but also showcases the potential of technology to enhance traditional challenges. Our endeavor exemplifies the fusion of creativity and technical expertise to revolutionize puzzle-solving methods.</p>
+        </div>
+        <div class="col-6 text-center">
+            <img class="img-fluid" alt="Responsive image" src="{{ url_for('static', filename='builtin/4.png')}}" alt="">
+        </div>
+    </div>
+</div>
+
+<div id="ex">
+    <style>
+        #ex1{
+            margin-top: 70px;
+            margin-bottom: 90px;
+            background-color: rgb(243, 241, 241);
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bolder;
+            border-radius: 50px;
+        }
+        #ex{
+            background-color: 	#0A1223;
+        }
+        #ex2{
+            margin-top: 200px;
+            padding-bottom: 200px;
+            a:hover {
+            background-color: yellow;
+          
+            }
+        }
+        #ex3{
+            background-color: #0A1223;
+        }
+        #ex4{
+            margin-top: 100px;
+        }
+        #visi{
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 20px;
+        }
+        #ex5{
+            font-family: 'Times New Roman', Times, serif;
+            padding-top: 150px;
+      
+        }
+        .fw{
+            font-size: large;
+        }
+        #cont{
+            background-color:#0A1223 ;
+            color: white;
+        }
+        .navbar-nav > li{
+        padding-left:30px;
+        padding-right:30px;
+        font-weight: bolder;
+        }
+       
+    </style>
+    
+    <div class="container " id="solve">
+        <div class="row ">
+            <div class=" row text-center" id="ex1">
+                <div class="col-6" id="ex2">
+                    <h1 class="fw-bolder">Rubik's Cube Solving</h1>
+                    <p class="fw-bolder" style="color:#0A1223;">Using Deep Learning</p>
+                    <div class=" pt-3" >
+    
+                        <a style="color:whitesmoke;" href="/solve"id="ex3" class="btn btn-primary ">START</a>
+                        
+                    </div>
+                </div>
+                <div class="col-6 pt-5 text-center ex4">
+                   <img class="img-fluid" alt="Responsive image" src="{{ url_for('static', filename='builtin/bg.png')}}" alt="">
+                </div>
+                
+            </div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+        </div>
+    </div>
+   
+</div>
+<div class="container pb-5 " id="visi" >
+    <h1 class="text-center pt-5" id="ourvision">Our Vision</h1>
+    <div class="row">
+        
+        <div class="col-6 pt-4">
+            <p>"Our vision is to harness the power of visual intelligence by developing an innovative Rubik's Cube solving project. We aim to create a solution that utilizes cutting-edge technology to solve the cube through visual recognition, enabling a seamless and interactive experience for users. Our project aspires to showcase the potential of computer vision, deep learning, and algorithmic thinking in solving real-world puzzles. By combining these elements, we envision a project that not only enhances problem-solving skills but also highlights the exciting possibilities of merging technology with classic challenges."</p>
+        </div>
+        <div class="col-6 text-center pt-4">
+            <img class="img-fluid" alt="Responsive image" src="{{ url_for('static', filename='builtin/2.jpg')}}" alt="">
+        </div>
+     
+    </div>
+</div>
+<div class="container-fluid pt-5 pb-5 "style="background-color:#0A1223;" id="instructions">
+    <div class="container">
+        <h1 style="color:white;" class="text-center">
+            Instructions
+        </h1>
+        <div class="row">
+           
+            <div class="col-6 text-white pt-4">
+                <p>1.Set up the camera and ensure proper calibration for accurate color recognition.</p>
+                <p>2.Activate the camera scanning feature in the application.</p>
+                <p>3.Position the Rubik's Cube in good lighting within the camera's view.</p>
+                <p>4.Capture images of all six sides of the Rubik's Cube using the camera.</p>
+                <p>5.Utilize the project's algorithm to identify the colors of each cubelet.</p>
+                <p>6.Verify the detected colors match the actual cube colors.</p>
+                <p>7.Apply the algorithm to virtually draw lines on the cube based on recognized colors.</p>
+                <p>8.Integrate the Kociemba solving algorithm with the recognized cube configuration.</p>
+                <p>9.Display the solution steps visually using the drawn virtual lines on the cube.</p>
+                <p>10.Follow the virtual lines to execute each step of the solution.</p>
+                <p>11.The application updates the virtual lines with each completed step.</p>
+                <p>Ensure the cube's sides are consistently colored after completing all steps.</p>
+            </div>
+            <div class="col-6 text-center pt-5">
+                <img class="img-fluid " alt="Responsive image" src="{{ url_for('static', filename='builtin/bg.png')}}" alt="">
+            </div>
+        </div>
+    </div>
+   
+</div>
+<div class="container pb-5 " id="visi">
+    <h1 class="text-center pt-5" id="about">About</h1>
+    <div class="row">
+        <div class="col-6 text-center pt-3">
+            <img class="img-fluid" alt="Responsive image" src="{{ url_for('static', filename='builtin/bg.png')}}" alt="">
+        </div>
+        <div class="col-6 pt-5">
+            <p>Our project presents an innovative solution for solving the Rubik's Cube using cutting-edge technology. Leveraging visual recognition through camera scanning and virtual line drawing, we've created an interactive experience that guides users step-by-step to solve the iconic puzzle. Our approach integrates advanced algorithms like Kociemba's to analyze cube configurations and determine optimal solutions. By seamlessly blending computer vision, deep learning, and algorithmic thinking, our project not only offers a unique way to conquer the Rubik's Cube but also showcases the potential of technology to enhance traditional challenges. Our endeavor exemplifies the fusion of creativity and technical expertise to revolutionize puzzle-solving methods.</p>
+        </div>
+    </div>
+</div>
+<div class="container-fluid pb-5 " id="cont">
+    <h1 class="text-center pt-5">Contact Us</h1>
+    <div class="container">
+        <p class="text-center pt-4">Email: aliakram4731@gmail.com if you have any question about the project and our research activities. We always welcome collaboration and joint research!</p>
+    </div>
+</div>
+<script src="{{ url_for('static', filename='scripts/scripts.js') }}"></script>
+{% endblock content %}
